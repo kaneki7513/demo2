@@ -1,0 +1,28 @@
+<p>basic works!</p>
+<button (click)="go()">go to insta</button>
+<h1>Hello</h1>
+{{title}}
+<br>
+<input type="button" value="Show/Hide" (click)="toggle()">
+<br><br><br>
+
+<div *ngIf = val>
+arrayname<input type="text" id="t1" #n/>
+<input type="button" value="Add" (click)="Add(n.value)" />
+<li *ngFor="let i of array">
+    {{i}}
+</li>
+<br>
+
+AddNumber<input type="text" appText id="t2" value="1-" #num />
+AddNumberName<input type="text" appText id="t2" value="1-" #numname />
+Addsomething<input type="text" appText id="t2" value="1-" #some />
+AddimgAddress<input type="text" appText  id="t2" value="1-" #img />
+AddShow<input type="text" id="t2" value="1-" #s />
+<input type="button" value="Add" (click)="Addarray1(num.value,numname.value,some.value,img.value,s.value)" />
+<li *ngFor="let i of array1">
+    
+   <p *ngIf= i.show> {{i.Eid}}--{{i.Ename}}
+   </p><input type="button" value="show/hide" (click)="togglerow(i)" class = "focus" appText><img src={{i.image}}>
+</li>
+</div>
